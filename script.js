@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   
     const displayPokemon = (player, pokemon) => {
-      const { name, experience, abilities, sprites } = pokemon;
+      const { name, base_experience, abilities, sprites } = pokemon;
   
       player.nameElement.textContent = player.name;
       player.scoreElement.textContent = `Score: ${player.score}`;
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       player.card.querySelector('#img').appendChild(imgElement);
   
       player.card.querySelector('#name').textContent = `Name: ${name}`;
-      player.card.querySelector('#experience').textContent = `Experience: ${experience}`;
+      player.card.querySelector('#experience').textContent = `Experience: ${base_experience}`;
       const abilitiesList = player.card.querySelector('#abilities');
       abilitiesList.innerHTML = 'Abilities';
       abilities.forEach((ability) => {
